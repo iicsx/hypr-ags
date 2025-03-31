@@ -17,7 +17,25 @@ if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
     cat ~/.cache/ags/user/generated/terminal/sequences.txt
 end
 
-alias pamcan=pacman
+export EDITOR=nvim
+
+alias vh='$EDITOR .'
+
+alias la='ls -la'
+alias ..='cd ..'
+alias ...='cd ...'
+
+alias gs='git status'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gr='git restore'
+alias grs='git restore --staged'
+alias gb='git branch'
+alias gc='git commit'
+alias ga='git add'
+alias glo='git log --oneline'
+
+aslias sude='sudo -E -s'
 
 zoxide init --cmd cd fish | source
 
