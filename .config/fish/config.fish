@@ -35,7 +35,7 @@ alias gc='git commit'
 alias ga='git add'
 alias glo='git log --oneline'
 
-aslias sude='sudo -E -s'
+alias sudoe='sudo -E -s'
 
 zoxide init --cmd cd fish | source
 
