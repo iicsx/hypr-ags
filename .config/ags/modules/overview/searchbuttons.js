@@ -200,3 +200,19 @@ export const AiButton = ({ text }) =>
       App.openWindow("sideleft");
     },
   });
+
+export const QuteButton = ({ text }) =>
+  searchItem({
+    materialIconName: "planet",
+    name: "Open in QuteBrowser",
+    actionName: "Go",
+    content: `${text}`,
+    onActivate: () => {
+      App.closeWindow("overview");
+      execAsync([
+        "bash",
+        "-c",
+        `qutebrowser -- :open '${text}' &`,
+      ]).catch(print);
+    },
+  });

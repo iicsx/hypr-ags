@@ -21,6 +21,7 @@ import {
   ExecuteCommandButton,
   SearchButton,
   AiButton,
+  QuteButton,
   NoResultButton,
 } from "./searchbuttons.js";
 import { checkKeybind } from "../.widgetutils/keybind.js";
@@ -181,6 +182,8 @@ export const SearchAndWindows = () => {
       }
 
       // Add fallback: search
+      if (userOptions.search.enableFeatures.webSearch)
+        resultsBox.add(QuteButton({ text: entry.text }));
       if (userOptions.search.enableFeatures.aiSearch)
         resultsBox.add(AiButton({ text: entry.text }));
       if (userOptions.search.enableFeatures.webSearch)
