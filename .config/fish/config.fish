@@ -19,6 +19,7 @@ end
 
 export EDITOR=nvim
 
+alias v='$EDITOR'
 alias vh='$EDITOR .'
 
 alias la='ls -la'
